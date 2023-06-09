@@ -18,4 +18,4 @@ const vehicleSchema = new Schema(
     }
 )
 
-module.exports = phoneSchema
+module.exports = vehicleSchema
