@@ -163,7 +163,7 @@ const main = async () => {
 
     {  
         
-        image:"https://s3.us-east-2.amazonaws.com/dealer-inspire-vps-vehicle-images/stock-images/thumbnails/large/chrome/39185e12ab896a0356afef9d114e13d2.png",     
+        image:"https://s3.us-east-2.amazonaws.com/dealer-inspire-vps-vehicle-images/78d0-110007358/1N6AA1ED4PN106285/c686567f3e4b21d58cdbe58c49908d64.jpg",     
         vehicle_name: "Nissan Titan 4x4 Crew Cab PRO-4X", 
         release_yr: 2023,
         price: 62965,
@@ -178,5 +178,63 @@ const main = async () => {
         
     },
 
+    {  
+        
+        image:"https://s3.us-east-2.amazonaws.com/dealer-inspire-vps-vehicle-images/stock-images/chrome/5d469b7a9db98f796176da7abc330a95.png",     
+        vehicle_name: "Nissan Altima 2.5 SL", 
+        release_yr: 2023,
+        price: 34645,
+        drive_train: "FWD",
+        ext_color: "Gun Metallic",
+        int_color: "Charcoal",
+        milage: 5600,
+        doors: 4,
+        vin: "1N4BL4EV1PN390038",
+        type_id: Types[0].type_name,
+        make_id: Makes[0].name,
+        
+    },
+
+    {  
+        
+        image:"https://s3.us-east-2.amazonaws.com/dealer-inspire-vps-vehicle-images/stock-images/thumbnails/large/chrome/baf5bb2eb1e207a6d7da44a57ed1381f.png",     
+        vehicle_name: "Nissan Pathfinder SL", 
+        release_yr: 2023,
+        price: 49535,
+        drive_train: "4WD",
+        ext_color: "Super Black",
+        int_color: "Charcoal",
+        milage: 4267,
+        doors: 4,
+        vin: "5N1DR3CD4PC253754",
+        type_id: Types[1].type_name,
+        make_id: Makes[0].name,
+        
+    },
+
+    {  
+        
+        image:"https://s3.us-east-2.amazonaws.com/dealer-inspire-vps-vehicle-images/57bf-110007345/thumbnails/large/1N6ED1EJ1PN636454/33a8f21bfa305d6ffd73afef2260ef0a.jpg",     
+        vehicle_name: "Nissan Frontier Crew Cab 4x2 PRO-X", 
+        release_yr: 2023,
+        price: 42385,
+        drive_train: "RWD",
+        ext_color: "Tactical Green Metallic",
+        int_color: "Charcoal W/Lava Red Stit",
+        milage: 3428,
+        doors: 4,
+        vin: "1N6ED1EJ6PN646848",
+        type_id: Types[2].type_name,
+        make_id: Makes[0].name,
+        
+    },
+
 ]
 }
+
+const run = async () => {
+    await main()
+    db.close()   
+    } 
+    
+    run()
