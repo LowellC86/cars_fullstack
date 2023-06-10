@@ -10,5 +10,4 @@ module.exports = {
   Make,
   Type,
   Vehicle
-  
 }
