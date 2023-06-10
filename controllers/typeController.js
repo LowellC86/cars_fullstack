@@ -18,8 +18,8 @@ const getTypes = async (req, res)=> {
 
 
 module.exports = {
-    getIosPhones,
-    getAndroidPhones,
+    getNissanVehicles,
+    getToyotaVehicles,
     getTypes,
     getTypesById
 }

@@ -12,11 +12,6 @@ const getMakes = async (req, res)=> {
 
 
 
-
-
-
-
-
 module.exports = {
     getMakes,
     getMakesById,

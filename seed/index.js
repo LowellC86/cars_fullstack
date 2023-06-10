@@ -5,27 +5,27 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 const main = async () => {
 
     const Makes = [
-        { make: 'Nissan',
-          make_id: Makes[0].make.name
+        { name: 'Nissan',
+          
         },
         {
-          make: 'Toyota',
-          make_id: Makes[1].make.name   
+          name: 'Toyota',
+          
         }
      ]
 
     const Types = [
         {
             name:'Sedan',
-           type_id: Types[0].type_name
+           
         },
         {
             name:'SUV',
-           type_id: Types[1].type_name
+           
         },
         {
             name:'Truck',
-            type_id: Types[2].type_name
+            
         },
     ]
 
@@ -41,7 +41,7 @@ const main = async () => {
         milage: 7391,
         doors: 4,
         vin: "4T1G11AK8PU724423",
-        type_id: Types[0].type_name,
+        type_id: Types[0].name,
         make_id: Makes[1].name,
         
     },
@@ -57,7 +57,7 @@ const main = async () => {
         milage: 1345,
         doors: 4,
         vin: "2T3W1RFV8PW271375",
-        type_id: Types[1].type_name,
+        type_id: Types[1].name,
         make_id: Makes[1].name,
       
     },
@@ -73,7 +73,7 @@ const main = async () => {
         milage: 1345,
         doors: 4,
         vin: "3TYAX5GNXPT081468",
-        type_id: Types[2].type_name,
+        type_id: Types[2].name,
         make_id: Makes[1].name,
     },
 
@@ -89,7 +89,7 @@ const main = async () => {
         milage: 7391,
         doors: 4,
         vin: "JTDBCMFE5PJ006908",
-        type_id: Types[0].type_name,
+        type_id: Types[0].name,
         make_id: Makes[1].name,
       
     },
@@ -106,7 +106,7 @@ const main = async () => {
         milage: 1345,
         doors: 4,
         vin: "JTEEU5JR7P5292596",
-        type_id: Types[1].type_name,
+        type_id: Types[1].name,
         make_id: Makes[1].name,
 
     },
@@ -123,7 +123,7 @@ const main = async () => {
         milage: 1345,
         doors: 4,
         vin: "5TFKB5AA0PX027336",
-        type_id: Types[2].type_name,
+        type_id: Types[2].name,
         make_id: Makes[1].name,
     },
 
@@ -139,7 +139,7 @@ const main = async () => {
         milage: 4500,
         doors: 4,
         vin: "3N1AB8CV7PY267188",
-        type_id: Types[0].type_name,
+        type_id: Types[0].name,
         make_id: Makes[0].name,
         
     },
@@ -156,7 +156,7 @@ const main = async () => {
         milage: 10,
         doors: 4,
         vin: "JN8BT3CA7PW409551",
-        type_id: Types[1].type_name,
+        type_id: Types[1].name,
         make_id: Makes[0].name,
         
     },
@@ -173,7 +173,7 @@ const main = async () => {
         milage: 2300,
         doors: 4,
         vin: "1N6AA1ED0PN114433",
-        type_id: Types[2].type_name,
+        type_id: Types[2].name,
         make_id: Makes[0].name,
         
     },
@@ -190,7 +190,7 @@ const main = async () => {
         milage: 5600,
         doors: 4,
         vin: "1N4BL4EV1PN390038",
-        type_id: Types[0].type_name,
+        type_id: Types[0].name,
         make_id: Makes[0].name,
         
     },
@@ -207,7 +207,7 @@ const main = async () => {
         milage: 4267,
         doors: 4,
         vin: "5N1DR3CD4PC253754",
-        type_id: Types[1].type_name,
+        type_id: Types[1].name,
         make_id: Makes[0].name,
         
     },
@@ -224,13 +224,27 @@ const main = async () => {
         milage: 3428,
         doors: 4,
         vin: "1N6ED1EJ6PN646848",
-        type_id: Types[2].type_name,
+        type_id: Types[2].name,
         make_id: Makes[0].name,
         
     },
 
 ]
+
+await Type.insertMany(Types)
+console.log('type created')
+await Make.insertMany(Makes)
+console.log('make created')
+await Vehicle.insertMany(Vehicles)
+console.log("Check these cars out!")
+
+
+
 }
+
+
+
+
 
 const run = async () => {
     await main()

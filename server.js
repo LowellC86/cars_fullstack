@@ -20,5 +20,5 @@ app.listen(PORT, () => {
 })
 
 app.get('/', (req, res) => {
-  res.send('This is our landing page!')
+  res.send('Buy a car!')
 })

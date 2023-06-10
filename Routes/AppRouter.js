@@ -7,8 +7,8 @@ const VehicleRouter = require('./vehiclesRouter')
 
 
 Router.use('/makes', MakeRouter)
-Router.use('/types', PhoneRouter)
-Router.use('/vehicles', PlatformRouter)
+Router.use('/types', TypeRouter)
+Router.use('/vehicles', VehicleRouter)
 
 
 module.exports = Router
