@@ -8,7 +8,7 @@ const typesController = require('../controllers/typeController.js')
 
 
 Router.get('/', typesController.getTypes)
-// Router.get('/:id', typesController.getTypesById)
+Router.get('/:id', typesController.getTypesById)
 
 
 
