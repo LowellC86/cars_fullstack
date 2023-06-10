@@ -6,3 +6,12 @@ const getVehicles = async (req, res)=> {
     const vehicles = await Phone.find()
     res.json(vehicles)
 }
+
+
+
+
+module.exports = {
+    getVehicles
+    // getAllPlants,
+    // getPlantById
+}

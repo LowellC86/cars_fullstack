@@ -1,4 +1,4 @@
-const { Make, Vehicle } = require('../models')
+const { Make } = require('../models')
 
 const getMakes = async (req, res)=> {
     const makes = await Make.find({})
@@ -10,11 +10,9 @@ const getMakes = async (req, res)=> {
 
 
 
-
-
 module.exports = {
     getMakes,
-    getMakesById,
-    getVehicles,
+    // getMakesById,
+    // 
     
 }

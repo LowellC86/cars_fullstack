@@ -1,4 +1,4 @@
-const { Type, Vechile,  } = require('../models')
+const { Type } = require('../models')
 
 
 const getTypes = async (req, res)=> {
@@ -18,8 +18,8 @@ const getTypes = async (req, res)=> {
 
 
 module.exports = {
-    getNissanVehicles,
-    getToyotaVehicles,
-    getTypes,
-    getTypesById
+    // getNissanVehicles,
+    // getToyotaVehicles,
+     getTypes,
+    // getTypesById
 }
