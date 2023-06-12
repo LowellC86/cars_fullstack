@@ -34,3 +34,22 @@ nav {
     height: 100%;
     object-fit: cover;
   }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0px;
+  }
+  
+  header {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .logo img {
+    width: 60px;
+    height: 60px;
+  }
+  
+ 
+  
