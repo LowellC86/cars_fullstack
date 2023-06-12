@@ -16,6 +16,7 @@ const Makes = require('./models/make');
 
 
 
+
 const { Make } = require('./models')
 const { Type } = require('./models')
 const { Vehicle } = require('./models')
@@ -26,6 +27,7 @@ app.use(cors())
 app.use(express.json())
 app.use(logger('dev'))
 app.use(bodyParser.json())
+app.use('/api', AppRouter)
 
 
 app.listen(PORT, () => {
