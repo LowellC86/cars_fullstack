@@ -7,7 +7,13 @@ const AppRouter = require('./Routes/AppRouter')
 const logger = require('morgan')
 const bodyParser = require('body-parser')
 const vehiclesController = require('./controllers/vehicleController')
-const Vehicles = require('./models/vehicle');
+const Vehicles = require('./models/vehicle')
+const typesController = require('./controllers/typeController')
+const Types = require('./models/type')
+const makesController = require('./controllers/makeController')
+const Makes = require('./models/make');
+
+
 
 
 const { Make } = require('./models')
@@ -34,3 +40,13 @@ app.get('/', (req, res) => res.send('This is a car!'))
 app.post('/vehicles', vehiclesController.createVehicle)
 app.put('/vehicles/:id', vehiclesController.updateVehicle)
 app.delete('/vehicles/:id', vehiclesController.deleteVehicle)
+
+app.get('/', (req, res) => res.send('This is a car!'))
+app.post('/types', typesController.createType)
+app.put('/types/:id', typesController.updateType)
+app.delete('/types/:id', typesController.deleteType)
+
+app.get('/', (req, res) => res.send('This is a car!'))
+app.post('/makes', makesController.createMake)
+app.put('/makes/:id', makesController.updateMake)
+app.delete('/makes/:id', makesController.deleteMake)
