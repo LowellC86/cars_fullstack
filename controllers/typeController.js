@@ -21,13 +21,6 @@ const getTypesById = async (req, res) => {
 
 
 
-
-
-
-
-
-
-
 module.exports = {
     getTypes,
     getTypesById

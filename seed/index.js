@@ -231,6 +231,9 @@ const main = async () => {
 
 ]
 
+await Type.deleteMany()
+await Make.deleteMany()
+await Vehicle.deleteMany()
 await Type.insertMany(Types)
 console.log('type created')
 await Make.insertMany(Makes)
