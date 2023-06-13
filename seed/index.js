@@ -79,7 +79,7 @@ const main = async () => {
 
     {
 
-        image:"https://s3.us-east-2.amazonaws.com/dealer-inspire-vps-vehicle-images/a3dd-110006891/thumbnails/large/JTDBCMFE3PJ006437/a4e89ee7865b3a6dcad774521dd73369.jpg",     
+        image:"https://s3.us-east-2.amazonaws.com/dealer-inspire-vps-vehicle-images/stock-images/chrome/86c119309ae7b67a0314f4e5b9eb35fd.png",     
         vehicle_name: "Toyota Corolla Hybrid LE", 
         release_yr: 2023,
         price: 25166,
@@ -96,7 +96,7 @@ const main = async () => {
 
     {
 
-        image:"https://content.homenetiol.com/2000292/2171686/0x0/stock_images/8/cc_2023TOS07_01_640/cc_2023TOS070095_01_640_1G3.jpg",     
+        image:"https://dealerimages.dealereprocess.com/image/upload/c_limit,f_auto,fl_lossy,w_auto/v1/svp/dep/22toyota4runnertrdoffrdprem4wdsu5t/toyota_224runnertrdoffrdprem4wdsu5t_angularfront_magneticgraymetallic",     
         vehicle_name: "Toyota 4Runner SR5", 
         release_yr: 2023,
         price: 42615,
@@ -163,7 +163,7 @@ const main = async () => {
 
     {  
         
-        image:"https://s3.us-east-2.amazonaws.com/dealer-inspire-vps-vehicle-images/78d0-110007358/1N6AA1ED4PN106285/c686567f3e4b21d58cdbe58c49908d64.jpg",     
+        image:"https://s3.us-east-2.amazonaws.com/dealer-inspire-vps-vehicle-images/stock-images/chrome/76fab05d200394911356a6917d69c447.png",     
         vehicle_name: "Nissan Titan 4x4 Crew Cab PRO-4X", 
         release_yr: 2023,
         price: 62965,
@@ -214,7 +214,7 @@ const main = async () => {
 
     {  
         
-        image:"https://s3.us-east-2.amazonaws.com/dealer-inspire-vps-vehicle-images/57bf-110007345/thumbnails/large/1N6ED1EJ1PN636454/33a8f21bfa305d6ffd73afef2260ef0a.jpg",     
+        image:"https://s3.us-east-2.amazonaws.com/dealer-inspire-vps-vehicle-images/stock-images/chrome/abaa1bc1a58abcd5597c3441468342da.png",     
         vehicle_name: "Nissan Frontier Crew Cab 4x2 PRO-X", 
         release_yr: 2023,
         price: 42385,
