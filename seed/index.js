@@ -63,7 +63,7 @@ const main = async () => {
     },
 
     {
-        image:"https://images.dealer.com/autodata/us/color/2023/USD30TOS111C0/3T3.jpg",     
+        image:"https://s3.us-east-2.amazonaws.com/dealer-inspire-vps-vehicle-images/stock-images/thumbnails/large/chrome/5b5ae8bb5009704efbdcd0b8a7c0a15e.png",     
         vehicle_name: "Toyota Tacoma SR", 
         release_yr: 2023,
         price: 31553,

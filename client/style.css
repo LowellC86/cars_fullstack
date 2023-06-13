@@ -1,55 +1,107 @@
 nav {
-    background-color: #8b72a3;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li {
-    display: inline-block;
-  }
-  
-  nav ul li a {
-    display: block;
-    padding: 10px 20px;
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  nav ul li a:hover {
-    background-color: #555;
-  }
-  
-  .image-container {
-    width: 500px;
-    height: 500px;
-    border: 1px solid rgb(255, 255, 255);
-  }
+  background-color: #58646d;
+}
 
-  .image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+nav ul {
+  list-style-type: outside;
+  margin: 0;
+  padding: 0;
+}
 
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0px;
-  }
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#banner {
+  background-image: url(https://media.ed.edmunds-media.com/non-make/carbuying/carbuying_426161_717.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 100px 0;
+  color: #fff;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #ffffff;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+#featured-cars {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.car {
+  text-align: center;
+}
+
+.car img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #333;
+  padding: 10px;
+  color: #fff;
   
-  header {
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .logo img {
-    width: 60px;
-    height: 60px;
-  }
-  
- 
-  
+}
+
+.welcome {
+  font-size: 30px;
+  font-weight: 24px;
+  position: relative;
+  z-index: 1;
+  text-shadow: #555;
+}
+
+.hide {
+  display: none !important
+
+}
