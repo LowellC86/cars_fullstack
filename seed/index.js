@@ -31,7 +31,7 @@ const main = async () => {
 
     const Vehicles = [
     {  
-        image:"https://s3.us-east-2.amazonaws.com/dealer-inspire-vps-vehicle-images/d9ac-11002486/4T1S11AK3PU788637/b9856897b33f5db279f26db9a37952eb.jpg",     
+        image:"https://www.toyotaofnewbern.com/assets/stock/ColorMatched_01/Transparent/1280/cc_2023TOC02_01_1280/cc_2023TOC020026_01_1280_1J9.png",     
         vehicle_name: "Toyota Camry SE", 
         release_yr: 2023,
         price: 29988,
@@ -47,7 +47,7 @@ const main = async () => {
     },
 
     {  
-        image:"https://images.dealer.com/autodata/us/color/2023/USD30TOS111C0/3T3.jpg",     
+        image:"https://s3.us-east-2.amazonaws.com/dealer-inspire-vps-vehicle-images/stock-images/thumbnails/large/chrome/1d71ab2f29f24d4aa780a2fb486dc89b.png",     
         vehicle_name: "Toyota RAV4 XLE", 
         release_yr: 2023,
         price: 33831,

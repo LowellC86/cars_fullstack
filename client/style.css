@@ -56,7 +56,8 @@ nav ul li a {
   background-position: center;
   text-align: center;
   padding: 100px 0;
-  color: #fff;
+  color: #ffffff;
+  font-size: x-large;
 }
 
 .button {
@@ -93,15 +94,9 @@ footer {
   
 }
 
-.welcome {
-  font-size: 30px;
-  font-weight: 24px;
-  position: relative;
-  z-index: 1;
-  text-shadow: #555;
+.image-resize {
+  width: 200px;
+  height: auto; 
 }
 
-.hide {
-  display: none !important
 
-}
