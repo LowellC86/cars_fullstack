@@ -6,8 +6,5 @@ Router.get('/', controller.getMakes)
 Router.get('/:id', controller.getMakesById)
 
 
-// Router.get('/nissan', controller.getNissanVehicles)
-// Router.get('/toyota', controller.getToyotaVehicles)
-
 
 module.exports = Router
