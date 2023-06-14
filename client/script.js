@@ -52,13 +52,3 @@ cartbutton.addEventListener('click', async () => {
     cartdiv.style.display = "flex";
 })
 
-// add event listeners to all buttons with class addtocart using foreach on document.getElementsByClassName
-const addtocartbuttons = document.getElementsByClassName("addtocart")
-Array.from(addtocartbuttons).forEach((element) => {
-    element.addEventListener('click', async () => {
-        // get the vehicle id from the parent element's first child
-        let vehicle_name = element.parentElement.firstChild.innerHTML
-        // send a post request to the cart api with the vehicle id
-        await axios.post(`http://localhost:3001/api/cart/${vehicle_name}`)
-    })
-})

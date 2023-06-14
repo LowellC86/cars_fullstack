@@ -1,5 +1,5 @@
 const db = require('../db')
-const { Make, Type, Vehicle, Cart } = require('../models')
+const { Make, Type, Vehicle } = require('../models')
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
@@ -230,32 +230,20 @@ const main = async () => {
         },
     ]
 
-    const Carts = [
-        // represents our one and only cart
-        {
-            name: "Cart",
-            vehicles: []
-        }
-    ]
 
     await Type.deleteMany()
     await Make.deleteMany()
     await Vehicle.deleteMany()
-    await Cart.deleteMany()
-
+    
     await Type.insertMany(Types)
     console.log('type created')
     await Make.insertMany(Makes)
     console.log('make created')
     await Vehicle.insertMany(Vehicles)
     console.log("Check these cars out!")
-    await Cart.insertMany(Carts)
+    
     console.log("Empty cart created")
 }
-
-
-
-
 
 const run = async () => {
     console.log("running")
