@@ -59,7 +59,17 @@ nav ul li a {
   color: #ffffff;
   font-size: x-large;
 }
-
+#cartdiv {
+  background-color: white;
+  min-height: 170px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-inline: 1rem;
+  row-gap: 1rem;
+}
 .button {
   display: inline-block;
   padding: 10px 20px;
@@ -99,4 +109,30 @@ footer {
   height: auto; 
 }
 
+#cartbutton {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 1.125rem;
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+}
 
+#cartdiv {
+  display: none;
+}
+#carList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-inline: 1rem;
+  row-gap: 1rem;
+}
+#carList > div {
+  margin-block: 0.5rem;
+}
