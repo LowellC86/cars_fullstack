@@ -11,16 +11,41 @@ const getAllCart = async (req, res)=> {
     }
 }
 
+const createCart = async (req, res) => {
+    try {
+        const cart = await new Cart(req.body)
+        await cart.save()
+        return res.status(201).json({
+            cart,
+        });
+    } catch (error) {
+        return res.status(500).json({ error: error.message })
+    }
+}
+
+const getCartById = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const cart = await Cart.findById(id)
+        if (cart) {
+            return res.status(200).json({ cart });
+        }
+        return res.status(404).send('Cart with the specified ID does not exists');
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+}
+
 const addNewVehicle = async (req, res) => {
     try {
-        
-        const vehicle_name = req.params.vehicle_name
+        const { id } = req.params;
+        const vehicle_name = req.body.vehicle_name
         console.log("vn: ", vehicle_name)
 
         const vehicle = await Vehicle.findOne({ name: vehicle_name })
 
-        const cart = await Cart.findOneAndUpdate(
-            { name: 'Cart'},
+        const cart = await Cart.findByIdAndUpdate(
+            id,
             { $push: { vehicles: vehicle._id } }, 
             { new: true } 
         ).populate('vehicles');
@@ -32,10 +57,12 @@ const addNewVehicle = async (req, res) => {
 
 const deleteVehicleFromCart = async (req, res) => {
     try {
+        const { id } = req.params;
         const { vehicle_name } = req.body
-        await Cart.findOneAndUpdate(
-            { name: 'Cart' },
-            { $pull: { vehicles: vehicle_name } },
+        const vehicle = await Vehicle.findOne({ name: vehicle_name })
+        await Cart.findByIdAndUpdate(
+            id,
+            { $pull: { vehicles: vehicle._id } },
             { new: true }
         ).populate('vehicles');
         return res.status(200).send("Vehicle deleted");
@@ -47,5 +74,7 @@ const deleteVehicleFromCart = async (req, res) => {
 module.exports = {
     getAllCart,
     addNewVehicle,
-    deleteVehicleFromCart
+    deleteVehicleFromCart,
+    createCart,
+    getCartById
 }

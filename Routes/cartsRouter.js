@@ -3,9 +3,9 @@ const Router = require('express').Router()
 const cartController = require('../controllers/cartController')
 
 Router.get('/', cartController.getAllCart)
-
-Router.post('/:vehicle_name', cartController.addNewVehicle)
-Router.post('/delete', cartController.deleteVehicleFromCart)
-
+Router.post('/', cartController.createCart)
+Router.put('/:id', cartController.addNewVehicle)
+Router.put('/:id', cartController.deleteVehicleFromCart)
+Router.get('/:id', cartController.getCartById)
 
 module.exports = Router

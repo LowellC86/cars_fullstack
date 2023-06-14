@@ -12,6 +12,7 @@ const aboutPage = document.getElementById("aboutPage");
 const carList = document.getElementById("carList");
 const carListSection = document.getElementById("carList");
 
+
 aboutLink.addEventListener("click", function (event) {
   event.preventDefault();
 
@@ -89,12 +90,14 @@ buttonInventory.addEventListener("click", async () => {
       button.addEventListener("click", async (event) => {
         const vehicleId = event.target.dataset.vehicleId;
         try {
+          const cart = await axios.create(`http://localhost:3001/api/cart`)
           let vehicleResponse = await axios.get(`http://localhost:3001/api/vehicles/${vehicleId}`);
           let selectedVehicle = vehicleResponse.data;
           console.log("Selected Vehicle:", selectedVehicle);
 
           
-          await axios.post(`http://localhost:3001/api/cart`, selectedVehicle);
+          let updatedCart = await axios.put(`http://localhost:3001/api/cart/${cart._id}`, selectedVehicle);
+          console.log(updatedCart)
           console.log("Vehicle added to cart.");
 
           

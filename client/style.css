@@ -51,7 +51,7 @@ nav ul li a {
 }
 
 #banner {
-  background-image: url(https://media.ed.edmunds-media.com/non-make/carbuying/carbuying_426161_717.jpg);
+  background-image: url(https://www.chase.com/content/services/structured-image/image.tablet.png/chase-ux/heroimage/primary/personal/auto/education/buying/seo_what_to_know_about_buying_car_out_of_state_private.png);
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -73,14 +73,22 @@ nav ul li a {
   row-gap: 1rem;
 }
 
-.button {
+.button.inventory {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #333;
+  background-color: #655e59;
   color: #ffffff;
   text-decoration: none;
   margin-top: 20px;
+  border-radius: 4px;
+  font-weight: bold; 
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
 }
+
+.button.inventory:hover {
+  background-color: #557289;
+}
+
 
 #featured-cars {
   display: flex;
@@ -129,6 +137,12 @@ footer {
 
 #carList {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.car-list-row {
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
@@ -137,9 +151,19 @@ footer {
   row-gap: 1rem;
 }
 
-#carList > div {
-  margin-block: 0.5rem;
+.car {
+  text-align: center;
+  width: calc(33.33% - 1rem); /* Adjust the width to fit three cars in a row */
+  margin-bottom: 1rem;
 }
+
+.car img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
 
 #aboutPage {
   display: none;
