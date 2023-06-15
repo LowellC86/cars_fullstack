@@ -4,7 +4,7 @@ const getAllCart = async (req, res)=> {
     try {
         const carts = await Cart.find({})
         console.log("carts: ", carts)
-        
+        return res.status(200).json({carts})
     }
     catch (error) {
         return res.status(500).json({ error: "Failed to get cart" })
@@ -35,6 +35,19 @@ const getCartById = async (req, res) => {
         return res.status(500).send(error.message);
     }
 }
+
+const getCartByUser = async (req, res) => {
+    try {
+        const {user} = req.params;
+        const cart = await Cart.findOne({name:user})
+        return res.status(201).json({
+            cart,
+        });
+    } catch (error) {
+        return res.status(500).json({ error: error.message })
+    }
+}
+
 
 const addNewVehicle = async (req, res) => {
     try {
@@ -76,5 +89,6 @@ module.exports = {
     addNewVehicle,
     deleteVehicleFromCart,
     createCart,
-    getCartById
+    getCartById,
+    getCartByUser
 }

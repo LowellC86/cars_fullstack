@@ -78,7 +78,7 @@ buttonInventory.addEventListener("click", async () => {
             <img class="image-resize" src=${vehicle.image}></img>
             <h2>$<span style="text-decoration: underline">${vehicle.price}</span></h2>
             <br />
-            <button class="addtocart" data-vehicle-id="${vehicle.id}">Add to Cart</button>
+            <button class="addtocart" data-vehicle-id="${vehicle._id}">Add to Cart</button>
           </div>
         `;
       })
@@ -89,14 +89,19 @@ buttonInventory.addEventListener("click", async () => {
     addToCartButtons.forEach((button) => {
       button.addEventListener("click", async (event) => {
         const vehicleId = event.target.dataset.vehicleId;
+        console.log(vehicleId)
+        console.log(event.target.dataset)
+        const name = prompt('Please Enter Your Name')
+        const email = prompt('Please enter your email')
         try {
-          const cart = await axios.create(`http://localhost:3001/api/cart`)
+          const cart = await axios.post(`http://localhost:3001/api/cart/`,{name,email})
+          console.log(cart.data.cart._id)
           let vehicleResponse = await axios.get(`http://localhost:3001/api/vehicles/${vehicleId}`);
           let selectedVehicle = vehicleResponse.data;
           console.log("Selected Vehicle:", selectedVehicle);
 
           
-          let updatedCart = await axios.put(`http://localhost:3001/api/cart/${cart._id}`, selectedVehicle);
+          let updatedCart = await axios.put(`http://localhost:3001/api/cart/${cart.data.cart._id}`, selectedVehicle);
           console.log(updatedCart)
           console.log("Vehicle added to cart.");
 
@@ -110,10 +115,13 @@ buttonInventory.addEventListener("click", async () => {
     console.error(error);
   }
 });
-
+console.log(cartbutton)
 cartbutton.addEventListener("click", async () => {
+  console.log("hello")
   try {
+    console.log("hello")
     let currentcart = await axios.get(`http://localhost:3001/api/cart`);
+    console.log(currentcart)
     console.log("currentcart is:", currentcart.data);
     const cars = currentcart.data.map((vehicle) => {
      

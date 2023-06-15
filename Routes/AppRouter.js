@@ -9,6 +9,6 @@ const db = require('../db')
 Router.use('/makes', MakeRouter)
 Router.use('/types', TypeRouter)
 Router.use('/vehicles', VehicleRouter)
-Router.use('/carts', CartRouter)
+Router.use('/cart', CartRouter)
 
 module.exports = Router
