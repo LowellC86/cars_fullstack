@@ -52,7 +52,7 @@ nav ul li a {
 
 #banner {
   background-image: url(https://www.chase.com/content/services/structured-image/image.tablet.png/chase-ux/heroimage/primary/personal/auto/education/buying/seo_what_to_know_about_buying_car_out_of_state_private.png);
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
