@@ -6,21 +6,18 @@ const app = express()
 const AppRouter = require('./Routes/AppRouter')
 const logger = require('morgan')
 const bodyParser = require('body-parser')
+
 const vehiclesController = require('./controllers/vehicleController')
-const Vehicles = require('./models/vehicle')
 const typesController = require('./controllers/typeController')
-const Types = require('./models/type')
 const makesController = require('./controllers/makeController')
+const cartController = require('./controllers/cartController')
+
+const Vehicles = require('./models/vehicle')
+const Types = require('./models/type')
 const Makes = require('./models/make');
+const Carts = require('./models/cart')
 
-
-
-
-
-const { Make } = require('./models')
-const { Type } = require('./models')
-const { Vehicle } = require('./models')
-
+const { Make, Type, Vehicle, Cart } = require('./models')
 
 app.use('/', AppRouter)
 app.use(cors())
@@ -52,3 +49,7 @@ app.get('/', (req, res) => res.send('This is a car!'))
 app.post('/makes', makesController.createMake)
 app.put('/makes/:id', makesController.updateMake)
 app.delete('/makes/:id', makesController.deleteMake)
+
+app.get('/cart', cartController.getAllCart)
+app.post('/cart/:vehicle_name', cartController.addNewVehicle)
+app.put('/cart/:vehicle_name', cartController.deleteVehicleFromCart)

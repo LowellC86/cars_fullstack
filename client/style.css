@@ -137,8 +137,15 @@ footer {
 
 #carList {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-inline: 1rem;
+  row-gap: 1rem;
+}
+#carList > div {
+  margin-block: 0.5rem;
 }
 
 .car-list-row {
